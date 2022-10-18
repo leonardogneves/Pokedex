@@ -76,5 +76,10 @@ $padding: rem-calc(20);
       }
     }
   }
+
+  .paginacao {
+    width: rem-calc(560);
+    border-radius: rem-calc(10);
+  }
 }
 }

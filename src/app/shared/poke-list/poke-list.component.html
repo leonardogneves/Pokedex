@@ -25,6 +25,14 @@
 </a>
 
 </ng-template>
+
+<mat-paginator
+              class="paginacao"
+              [length]="this.limit"
+              [pageSize]="this.next"
+              [pageSizeOptions]="[60, 120, 180]"
+              aria-label="Select page">
+</mat-paginator>
 </section>
 
 <img
