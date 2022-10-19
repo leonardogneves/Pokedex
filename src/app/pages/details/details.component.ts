@@ -1,9 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { forkJoin } from 'rxjs';
+import {MatTableModule} from '@angular/material/table';
+
 
 //Services
 import { PokeApiService } from './../../service/poke-api.service';
+export interface PeriodicElement {
+name: string;
+position: number;
+weight: number;
+symbol: string;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+{position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
+];
 
 @Component({
   selector: 'app-details',
@@ -11,6 +23,9 @@ import { PokeApiService } from './../../service/poke-api.service';
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
+
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  dataSource = ELEMENT_DATA;
 
   private urlPokemon: string = 'https://pokeapi.co/api/v2/pokemon';
   private urlName: string = 'https://pokeapi.co/api/v2/pokemon-species';

@@ -1,15 +1,15 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 //Modules
-import { PagesModule } from './pages/pages.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PagesModule } from './pages/pages.module';
 
 //Material Io Angular
-import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +21,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     PagesModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,22 +11,56 @@
   </section>
 
   <section class="pokemon__status">
+
+    <div class="d-flex justify-content-start" style="position: absolute; top: -5.625rem; left: 1.875rem;">
+
+      <!-- Pokemon Comum !-->
+    <div class="d-flex">
     <img
     [src]="pokemon[0].sprites.other.dream_world.front_default"
-    [alt]="pokemon[0].name" class="slideInDown">
+    [alt]="pokemon[0].name" class="slideInLeft">
+    </div>
 
+    <!-- Pokemon Shiny !-->
+    <div class="d-flex">
+    <img
+    [src]="pokemon[0].sprites.other.home.front_shiny"
+    [alt]="pokemon[0].name" class="slideInLeft">
+    </div>
+
+  </div>
 
   <article class="pokemon__status__statistics fadeIn">
     <section>
-      <h3>Estatísticas</h3>
+      <h3>Atributos</h3>
 
       <ol>
-        <li *ngFor="let value of pokemon[0].stats">
+        <li *ngFor="let value of pokemon[0].stats" style="text-transform: uppercase;">
           {{ value.stat.name }}
 
-        <strong>
+        <strong [style.color]="value.base_stat > 50 ? 'green' : '#cb3434'">
           {{ value.base_stat }}
         </strong>
+      </li>
+      </ol>
+
+      <h3 style="padding-top: 1rem;">Habilidades</h3>
+
+      <ol>
+        <li *ngFor="let value of pokemon[0].abilities" style="text-transform: uppercase;">
+          {{ value.ability.name }}
+      </li>
+      </ol>
+
+      <h3 style="padding-top: 1rem;">Movimentos</h3>
+
+      <ol>
+        <li *ngFor="let value of pokemon[0].moves" style="text-transform: uppercase;">
+          {{value.move.name}}
+
+          <strong [style.color]="value.base_stat > 50 ? 'green' : '#cb3434'">
+            {{ value.base_stat }}
+          </strong>
       </li>
       </ol>
     </section>

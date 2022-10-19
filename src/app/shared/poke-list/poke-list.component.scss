@@ -4,7 +4,6 @@ $padding: rem-calc(20);
 :host{
 .listagem {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 
   padding: $padding 0;
@@ -13,15 +12,10 @@ $padding: rem-calc(20);
     position: relative;
     display: flex;
     background: var(--branco);
-
-    width: calc(49% - 2.5rem);
-    height: rem-calc(157 - 40);
-
-    margin-bottom: rem-calc(10);
-    padding: $padding;
-
-    border-radius: rem-calc(10);
-
+    width: calc(23% - -1.5rem);
+    height: 8.825rem;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
     text-decoration: none;
     color: var(--primary-color);
 

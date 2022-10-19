@@ -3,6 +3,7 @@
 :host {
 	main {
 		margin-top: rem-calc(40);
+    max-width: rem-calc(900);
 
 		.pokemon__names {
 			position: relative;
@@ -40,10 +41,11 @@
 			position: relative;
 
 			img {
-				position: absolute;
+        display: flex;
+        justify-content: space-between;
 				top: rem-calc(-90);
 				left: rem-calc(30);
-				max-width: rem-calc(130);
+				max-width: rem-calc(180);
 				z-index: 10;
 
 				//Remove Bug Animation
@@ -115,5 +117,9 @@
 				}
 			}
 		}
+
+    table {
+      width: 100%;
+    }
 	}
 }

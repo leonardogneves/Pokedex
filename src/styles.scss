@@ -10,11 +10,12 @@ html {
 }
 
 main {
-	max-width: rem-calc(600);
+	max-width: 100%;
 	box-sizing: border-box;
 	padding: 0 20px;
 	margin: 0 auto;
 }
 
-html, body { height: 100%; }
+html, body { height: 100%;
+	background: var(--primary-color); }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,10 +1,11 @@
   <!-- Search -->
 <poke-search (emmitSearch)="getSearch($event)"></poke-search>
 
-<section class="listagem">
+<section class="listagem justify-content-center">
   <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
 
-    <a [routerLink]="['details', pokemon.status.id]" class="pokemon" *ngIf="pokemon.status">
+    <a [routerLink]="['details', pokemon.status.id]" class="pokemon m-1" *ngIf="pokemon.status">
+
       <section class="pokemon__status">
   <h2>
     {{ pokemon.name }}
@@ -25,15 +26,8 @@
 </a>
 
 </ng-template>
-
-<mat-paginator
-              class="paginacao"
-              [length]="this.limit"
-              [pageSize]="this.next"
-              [pageSizeOptions]="[60, 120, 180]"
-              aria-label="Select page">
-</mat-paginator>
 </section>
+
 
 <img
 src="assets/error.svg"
