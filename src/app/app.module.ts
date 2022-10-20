@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PagesModule } from './pages/pages.module';
 
 //Material Io Angular
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { PagesModule } from './pages/pages.module';
     PagesModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

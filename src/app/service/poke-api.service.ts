@@ -11,7 +11,6 @@ import { map, tap } from 'rxjs/operators';
 export class PokeApiService {
 
   private url: string = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=100'
-  private urlAtt: string = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=100'
 
   constructor(
     private http: HttpClient
@@ -26,7 +25,7 @@ export class PokeApiService {
           this.apiGetPokemons(resPokemons.url).subscribe (
             res => resPokemons.status = res
           )
-
+            console.log(resPokemons);
         })
       })
     )

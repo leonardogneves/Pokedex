@@ -19,3 +19,20 @@ main {
 html, body { height: 100%;
 	background: var(--primary-color); }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+// #Region scrollBar
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--branco);
+  border-radius: 20px;
+}
+
+// #Endregion scrollBar

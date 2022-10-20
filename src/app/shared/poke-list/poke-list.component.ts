@@ -14,12 +14,6 @@ export class PokeListComponent implements OnInit {
 
   public apiError: boolean = false;
 
-  //Paginação
-  public previous: any;
-  public next: any;
-  public count: any;
-  public limit: number = 60;
-
   constructor(
     private pokeApiService: PokeApiService
   ) { }
@@ -34,8 +28,6 @@ export class PokeListComponent implements OnInit {
         this.apiError = true;
       }
     );
-
-    this.paginacao();
   }
 
   public getSearch(value: string) {
@@ -44,21 +36,5 @@ export class PokeListComponent implements OnInit {
     });
 
     this.getAllPokemons = filter;
-  }
-
-  public paginacao() {
-    this.pokeApiService.apiListAllPokemons.subscribe(
-      res => {
-        this.count = res.count;
-        this.next = res.next;
-        this.previous = res.previous;
-        this.count = this.count;
-        this.next = this.next + 60;
-        this.previous = this.previous;
-      },
-      error => {
-        this.apiError = true;
-      }
-    );
   }
 }
