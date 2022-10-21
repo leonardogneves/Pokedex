@@ -25,7 +25,6 @@ export class PokeApiService {
           this.apiGetPokemons(resPokemons.url).subscribe (
             res => resPokemons.status = res
           )
-            console.log(resPokemons);
         })
       })
     )
@@ -35,7 +34,7 @@ export class PokeApiService {
     return this.http.get<any>(url).pipe(
       map(
         res => res
-      )
+        )
     )
   }
 

@@ -2,6 +2,8 @@
 <poke-search class="d-flex justify-content-center" (emmitSearch)="getSearch($event)"></poke-search>
 
 <section class="listagem">
+
+
   <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
 
     <a [routerLink]="['details', pokemon.status.id]" class="pokemon m-1" *ngIf="pokemon.status">

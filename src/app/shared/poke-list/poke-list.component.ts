@@ -1,11 +1,10 @@
-import { PokeApiService } from './../../service/poke-api.service';
 import { Component, OnInit } from '@angular/core';
-import {MatPaginatorModule} from '@angular/material/paginator';
+import { PokeApiService } from './../../service/poke-api.service';
 
 @Component({
   selector: 'poke-list',
   templateUrl: './poke-list.component.html',
-  styleUrls: ['./poke-list.component.scss']
+  styleUrls: ['./poke-list.component.scss'],
 })
 export class PokeListComponent implements OnInit {
 

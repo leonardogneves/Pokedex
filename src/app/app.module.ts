@@ -10,6 +10,7 @@ import { PagesModule } from './pages/pages.module';
 
 //Material Io Angular
 import {MatIconModule} from '@angular/material/icon';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {MatIconModule} from '@angular/material/icon';
     PagesModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

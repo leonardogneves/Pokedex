@@ -57,7 +57,7 @@
       <ol>
         <li *ngFor="let value of pokemon[0].moves" style="text-transform: uppercase;">
           {{value.move.name}}
-
+          {{value.version_group_details.level_learned_at}}
           <strong [style.color]="value.base_stat > 50 ? 'green' : '#cb3434'">
             {{ value.base_stat }}
           </strong>
