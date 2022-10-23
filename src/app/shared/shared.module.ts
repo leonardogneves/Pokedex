@@ -6,6 +6,7 @@ import { PokeSearchComponent } from './poke-search/poke-search.component';
 import { PokeListComponent } from './poke-list/poke-list.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     CommonModule,
     RouterModule,
     MatIconModule,
-    ScrollingModule
+    ScrollingModule,
+    NgxPaginationModule
   ]
 })
 export class SharedModule { }

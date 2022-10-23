@@ -3,7 +3,7 @@
 
 <section class="listagem">
 
-  <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
+  <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons | paginate: {itemsPerPage: 100, currentPage: p}">
 
     <a [routerLink]="['details', pokemon.status.id]" class="pokemon m-1" *ngIf="pokemon.status">
 
@@ -30,15 +30,9 @@
 
 <ng-container class="d-flex justify-content-end">
 
-<nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
-  </ul>
-</nav>
+<div class="bg-pagination centerContent">
+  <pagination-controls (pageChange)="p = $event" [maxSize]="15"></pagination-controls>
+</div>
 
 </ng-container>
 

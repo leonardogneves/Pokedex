@@ -8,6 +8,8 @@ import { PokeApiService } from './../../service/poke-api.service';
 })
 export class PokeListComponent implements OnInit {
 
+  p: number = 1;
+
   private setAllPokemons: any;
   public getAllPokemons: any;
 

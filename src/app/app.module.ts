@@ -12,6 +12,8 @@ import { PagesModule } from './pages/pages.module';
 import {MatIconModule} from '@angular/material/icon';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
     HttpClientModule,
     BrowserAnimationsModule,
     MatIconModule,
-    ScrollingModule
+    ScrollingModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

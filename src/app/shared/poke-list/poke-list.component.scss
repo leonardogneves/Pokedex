@@ -71,9 +71,14 @@ $padding: rem-calc(20);
     }
   }
 
-  .paginacao {
-    width: rem-calc(560);
-    border-radius: rem-calc(10);
+  .bg-pagination {
+    background-color: var(--branco);
+    right: 0;
+    float: right;
+  }
+
+  .ngx-pagination {
+    color: var(--branco);
   }
 }
 }
