@@ -28,16 +28,9 @@
 
 </ng-template>
 
-<ng-container class="d-flex justify-content-end">
-
-<div class="bg-pagination centerContent">
-  <pagination-controls (pageChange)="p = $event" [maxSize]="15"></pagination-controls>
-</div>
-
-</ng-container>
-
 </section>
 
+  <pagination-controls class="bg-pagination pb-2" (pageChange)="p = $event" [maxSize]="15" nextLabel="Próximo" previousLabel="Anterior"></pagination-controls>
 
 <img
 src="assets/error.svg"
